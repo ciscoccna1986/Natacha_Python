@@ -46,3 +46,5 @@ london_co = {
         "routing": True,
     },
 }
+User = input('Enter name: ')
+print(london_co[User])
