@@ -49,3 +49,7 @@ london_co = {
         "routing": True,
     },
 }
+user = input("Enter name: ")
+param = ",".join(london_co[user].keys())
+parametr = input(f"Enter parametr ({param}): ")
+print(london_co[user].get('param', 'Такого нет'))
