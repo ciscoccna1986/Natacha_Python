@@ -52,4 +52,4 @@ london_co = {
 user = input("Enter name: ")
 param = ",".join(london_co[user].keys())
 parametr = input(f"Enter parametr ({param}): ")
-print(london_co[user].get('param', 'Такого нет'))
+print(london_co[user].get(parametr, 'Такого нет'))
