@@ -45,5 +45,5 @@ london_co = {
 }
 user = input("Enter name router: ")
 param = ",".join(london_co[user].keys())
-parametr = input(f"Enter parametr ({param}): ")
-print(london_co[user].get(parametr," Такого параметра нет!!! ").lower())
+parametr = input(f"Enter parametr ({param}): ").lower()
+print(london_co[user].get(parametr," Такого параметра нет!!! "))
