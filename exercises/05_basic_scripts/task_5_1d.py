@@ -43,3 +43,7 @@ london_co = {
         "routing": True,
     },
 }
+user = input("Enter name router: ")
+param = ",".join(london_co[user].keys())
+parametr = input(f"Enter parametr ({param}): ")
+print(london_co[user].get(parametr," Такого параметра нет!!! ").lower())
