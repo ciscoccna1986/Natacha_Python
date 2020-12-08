@@ -46,8 +46,7 @@ london_co = {
     },
 }
 
-device = input("Введите имя устройства: ")
-params = ", ".join(london_co[device].keys())
-parameter = input(f"Введите имя параметра ({params}): ")
-
-print(london_co[device][parameter])
+user = input("Введите имя устройства: ")
+param = ",".join(london_co[user].keys())
+parametr = input(f"Введите имя параметра ({param}): ")
+print(london_co[user][parametr])
