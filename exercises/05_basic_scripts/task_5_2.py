@@ -24,3 +24,47 @@ Out[1]: '11111111111111111111111111110000'
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 """
+
+
+ip = input("Введите IP_address (x.x.x.x/x): ")
+ip,mask = ip.split('/')
+mask = int(mask)
+ip_1 = ip.split('.')
+oct1,oct2,oct3,oct4 = [
+int(ip_1[0]),
+int(ip_1[1]),
+int(ip_1[2]),
+int(ip_1[3]),
+]
+bin_ip = "{:08b} {:08b} {:08b} {:08b}".format(oct1,oct2,oct3,oct4)
+b = bin_ip[:mask] + '0' * (32-mask)
+int1,int2,int3,int4 =[
+int(b[0:8], 2),
+int(b[8:16], 2),
+int(b[16:24], 2),
+int(b[24:32], 2),
+]
+
+mask_int = '1' * mask + '0' * (32-mask)
+m1,m2,m3,m4 = [
+int(mask_int[0:8],2),
+int(mask_int[8:16],2),
+int(mask_int[16:24],2),
+int(mask_int[24:32],2),
+]
+
+ip_out = '''
+Network:
+{0:<8} {1:<8} {2:<8} {3:<8}
+{0:08b} {1:08b} {2:08b} {3:08b}
+'''
+
+mask_out = '''
+Mask:
+/{0}
+{1:<8} {2:<8} {3:<8} {4:<8}
+{1:08b} {2:08b} {3:08b} {4:08b}
+'''
+
+print(ip_out.format(oct1,oct2,oct3,oct4))
+print(mask_out.format(mask,m1,m2,m3,m4))
