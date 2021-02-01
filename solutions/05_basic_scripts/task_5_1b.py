@@ -49,4 +49,4 @@ london_co = {
 user = input("Введите имя устройства: ")
 param = ",".join(london_co[user].keys())
 parametr = input(f"Введите имя параметра ({param}): ")
-print(london_co[user][parametr])
+print(london_co[user].get(parametr,'Такого параметра нет'))
